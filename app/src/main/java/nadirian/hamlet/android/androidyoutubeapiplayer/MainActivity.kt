@@ -160,7 +160,7 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("NotifyDataSetChanged", "SuspiciousIndentation")
     fun fetchData(recyclerviewItemAdapterFooter: RecyclerviewItemAdapterFooter, list: ArrayList<Items>,string:String) {
-        val URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=$string&type=video&key=AIzaSyAWrQKBw0cZ8z9p3yLDbaEpCoogD9EkLKI"
+        val URL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=$string&type=video&key="
 
         val requestQueue = Volley.newRequestQueue(applicationContext)
         val stringRequest = StringRequest(Request.Method.GET, URL,
