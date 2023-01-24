@@ -42,12 +42,15 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildscript {
+        ext.nav_version="2.3.5"
+    }
 }
 
 dependencies {
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
     implementation "androidx.recyclerview:recyclerview:1.2.1"
-
+    implementation "androidx.navigation:navigation-fragment-ktx:2.5.3"
     implementation 'com.squareup.picasso:picasso:2.8'
     implementation 'com.google.apis:google-api-services-youtube:v3-rev20210915-1.32.1'
     implementation 'com.android.volley:volley:1.2.1'
