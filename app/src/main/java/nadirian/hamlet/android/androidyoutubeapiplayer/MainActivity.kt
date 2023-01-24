@@ -20,14 +20,14 @@ import org.json.JSONObject
 
 class MainActivity : AppCompatActivity() {
 
-    val url1 = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCe-XYtlVB58YcMCNnaq0nvA&maxResults=30&key=AIzaSyAWrQKBw0cZ8z9p3yLDbaEpCoogD9EkLKI"
-  //  CHANNELShttps://youtube.googleapis.com/youtube/v3/channels?part=snippet&id=UC_x5XG1OV2P6uZZ5FSM9Ttw&key=AIzaSyAWrQKBw0cZ8z9p3yLDbaEpCoogD9EkLKI
-    // val url = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCe-XYtlVB58YcMCNnaq0nvA&maxResults=30&key=AIzaSyCUNXyBXNoNYgTcLC7jSVHugOKIfHj7mJU"
-    //var url = "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=25&playlistId=PLBCF2DAC6FFB574DE&key=AIzaSyCUNXyBXNoNYgTcLC7jSVHugOKIfHj7mJU"//playlist
+    val url1 = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCe-XYtlVB58YcMCNnaq0nvA&maxResults=30&key="
+  //  CHANNELShttps://youtube.googleapis.com/youtube/v3/channels?part=snippet&id=UC_x5XG1OV2P6uZZ5FSM9Ttw&key=
+    // val url = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCe-XYtlVB58YcMCNnaq0nvA&maxResults=30&key="
+    //var url = "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=25&playlistId=PLBCF2DAC6FFB574DE&key="//playlist
   // val url = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=Eminem&type=video&key=AIzaSyCUNXyBXNoNYgTcLC7jSVHugOKIfHj7mJU"
     val url = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=&type=video&key=AIzaSyAWrQKBw0cZ8z9p3yLDbaEpCoogD9EkLKI"
 
-    //val url = "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=25&playlistId=PLBCF2DAC6FFB574DE&key=AIzaSyCUNXyBXNoNYgTcLC7jSVHugOKIfHj7mJU"//playlist
+    //val url = "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=25&playlistId=PLBCF2DAC6FFB574DE&key="//playlist
 
 
 
