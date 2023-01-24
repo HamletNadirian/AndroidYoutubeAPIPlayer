@@ -89,52 +89,6 @@ class SearchActivity : AppCompatActivity() {
             false
         }
     }
-    @SuppressLint("NotifyDataSetChanged", "SuspiciousIndentation")
-    fun fetchData(
-        recyclerviewItemAdapterFooter: RecyclerviewItemAdapterFooter,
-        list: ArrayList<Items>,
-        string: String
-    ) {
-        val URL =
-            "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=9&q=Eminem&type=video&key=AIzaSyCymtW3n1qgtgbZf9coifz2nHpKXXAPmVE"
-
-        val requestQueue = Volley.newRequestQueue(applicationContext)
-        val stringRequest = StringRequest(Request.Method.GET, URL,
-            { response ->
-                try {
-                    val obj = JSONObject(response)
-                    val jsonArray = obj.getJSONArray("items")
-                    for (i in 0 until jsonArray.length()) {
-                        val jsonObjectArr = jsonArray.getJSONObject(i)
-                        val jsonId = jsonObjectArr.getJSONObject("id")
-                        val jsonSnippet = jsonObjectArr.getJSONObject("snippet")
-                        val jsonThumbnail = jsonSnippet.getJSONObject("thumbnails")
-                            .getJSONObject("medium")
-                        val items = Items()
-                        if (i != 1 && i != 2 && jsonId.has("videoId")) {
-                            items.videoId = jsonId.getString("videoId")
-                            items.title = jsonSnippet.getString("title")
-                            items.url = jsonThumbnail.getString("url")
-                            if (jsonSnippet.has("channelTitle")) {
-                                items.channelTitle = jsonSnippet.getString("channelTitle")
-                            }
-                            list.add(items)
-                        }
-                    }
-                    if (list.size > 0)
-                        recyclerviewItemAdapterFooter.notifyDataSetChanged()
-
-                } catch (e: JSONException) {
-                    e.printStackTrace()
-                }
-            },
-            { error ->
-                Toast.makeText(applicationContext, error.message, Toast.LENGTH_SHORT).show()
-            })
-        requestQueue.add(stringRequest)
-    }
-
-
 
 
   @SuppressLint("NotifyDataSetChanged", "SuspiciousIndentation")
