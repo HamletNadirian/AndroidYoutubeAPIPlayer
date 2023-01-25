@@ -1,4 +1,4 @@
-package nadirian.hamlet.android.androidyoutubeapiplayer
+package nadirian.hamlet.android.androidyoutubeapiplayer.adapter
 
 import android.content.Context
 import android.content.Intent
@@ -9,6 +9,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
+import nadirian.hamlet.android.androidyoutubeapiplayer.PlayVideoOfYoutube
+import nadirian.hamlet.android.androidyoutubeapiplayer.R
+import nadirian.hamlet.android.androidyoutubeapiplayer.model.Items
 
 class RecyclerviewItemAdapterSearch internal constructor(
     private val itemsListSearch: List<Items>,

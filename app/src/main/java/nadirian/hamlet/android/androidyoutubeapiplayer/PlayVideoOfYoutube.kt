@@ -19,7 +19,7 @@ class PlayVideoOfYoutube : YouTubeBaseActivity(), YouTubePlayer.OnInitializedLis
         var intent = intent
         videoId = intent.getStringExtra("videoid")!!
         youTubePlayerView = findViewById(R.id.youtubePlayer)
-        youTubePlayerView.initialize("AIzaSyCUNXyBXNoNYgTcLC7jSVHugOKIfHj7mJU", this)
+        youTubePlayerView.initialize("AIzaSyDoVdfda3x50zuLxU9n-zZunBn_elMKddc", this)
     }
 
     override fun onInitializationSuccess(

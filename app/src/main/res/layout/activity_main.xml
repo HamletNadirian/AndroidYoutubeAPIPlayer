@@ -18,7 +18,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,11 +25,10 @@
             app:layout_constraintEnd_toStartOf="@+id/button_image"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-
             <EditText
                 android:id="@+id/edit_text"
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
+                android:layout_height="32dp"
                 android:background="@color/white"
                 android:imeOptions="actionDone"
                 android:inputType="textAutoCorrect|textCapSentences"
@@ -52,20 +50,17 @@
             app:layout_constraintVertical_bias="0.476" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycleView"
+    <fragment
+        android:id="@+id/fragment_header"
+        android:name="nadirian.hamlet.android.androidyoutubeapiplayer.fragment.HeaderFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_row_header" />
+        tools:layout="@layout/fragment_header" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycleViewFooter"
+    <fragment
+        android:id="@+id/fragment_footer"
+        android:name="nadirian.hamlet.android.androidyoutubeapiplayer.fragment.FooterFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="3"
-        tools:listitem="@layout/item_row_footer" />
+        tools:layout="@layout/fragment_footer" />
 </LinearLayout>

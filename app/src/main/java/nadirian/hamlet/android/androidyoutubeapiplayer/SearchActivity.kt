@@ -4,9 +4,7 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.EditorInfo
-import android.widget.Button
 import android.widget.EditText
-import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -15,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import nadirian.hamlet.android.androidyoutubeapiplayer.adapter.RecyclerviewItemAdapterSearch
+import nadirian.hamlet.android.androidyoutubeapiplayer.model.Items
 import org.json.JSONException
 import org.json.JSONObject
 
