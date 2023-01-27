@@ -23,7 +23,7 @@ class HeaderFragment : Fragment() {
     private lateinit var recyclerViewAdapter: RecyclerviewItemAdapter
     lateinit var recyclerView: RecyclerView
     private var list: ArrayList<Items> = arrayListOf()
-    val url1 = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCe-XYtlVB58YcMCNnaq0nvA&maxResults=9&key=AIzaSyDoVdfda3x50zuLxU9n-zZunBn_elMKddc"
+    val url1 = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCe-XYtlVB58YcMCNnaq0nvA&maxResults=9&key=YOURKEY"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
