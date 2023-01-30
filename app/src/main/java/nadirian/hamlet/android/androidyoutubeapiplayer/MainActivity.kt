@@ -17,16 +17,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-    
+
         editText = findViewById(R.id.edit_text)
         val intent = Intent(applicationContext, SearchActivity::class.java)
-                editText.onDone {
-                    var str = editText.text.toString()
-                    intent.putExtra("message_key", str)
-                    startActivity(intent)
-                }
+
+        editText.onDone {
+            var str = editText.text.toString()
+            intent.putExtra("message_key", str)
+            startActivity(intent)
+        }
 
     }
+
     fun EditText.onDone(callback: () -> Unit) {
         setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
