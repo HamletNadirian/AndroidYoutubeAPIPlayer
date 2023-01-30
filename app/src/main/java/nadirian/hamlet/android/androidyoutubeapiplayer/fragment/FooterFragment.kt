@@ -28,7 +28,7 @@ class FooterFragment : Fragment() {
     private lateinit var recyclerViewAdapterFooter: RecyclerviewItemAdapterFooter
     lateinit var recycleViewFooter: RecyclerView
     val url =
-        "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=6&q=&type=video&key=AIzaSyDoVdfda3x50zuLxU9n-zZunBn_elMKddc"
+        "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCxrxwFTBU3DTJ9Y5TKeW7KA&maxResults=6&key=AIzaSyCSMatZ9pufDtGa6mULtmfEZG-b30MKy88"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -43,7 +43,6 @@ class FooterFragment : Fragment() {
         recycleViewFooter.layoutManager = layoutManagerFooter
         recycleViewFooter.adapter = recyclerViewAdapterFooter
         fetchData(recyclerViewAdapterFooter, url, listFooter)
-
         return view
     }
     @SuppressLint("NotifyDataSetChanged", "SuspiciousIndentation")

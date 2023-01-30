@@ -23,7 +23,8 @@ class HeaderFragment : Fragment() {
     private lateinit var recyclerViewAdapter: RecyclerviewItemAdapter
     lateinit var recyclerView: RecyclerView
     private var list: ArrayList<Items> = arrayListOf()
-    val url1 = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCe-XYtlVB58YcMCNnaq0nvA&maxResults=9&key=AIzaSyDoVdfda3x50zuLxU9n-zZunBn_elMKddc"
+    val url1 = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCh-4c1ZoBPNP1C8c-7iVvUQ&maxResults=6&key=AIzaSyCSMatZ9pufDtGa6mULtmfEZG-b30MKy88"
+    //val url1 = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCe-XYtlVB58YcMCNnaq0nvA&maxResults=9&key=AIzaSyDoVdfda3x50zuLxU9n-zZunBn_elMKddc"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +37,7 @@ class HeaderFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_header, container, false)
         recyclerView = view?.findViewById<View>(R.id.recycleView) as RecyclerView
         recyclerViewAdapter = RecyclerviewItemAdapter(list, requireContext())
-        val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(
+      val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(
             context,
             LinearLayoutManager.HORIZONTAL,
             false

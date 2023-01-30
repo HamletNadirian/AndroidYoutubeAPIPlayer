@@ -21,7 +21,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="35dp"
             app:shapeAppearance="@style/AnimeImageView"
             tools:srcCompat="@tools:sample/avatars" />
 
