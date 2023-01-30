@@ -29,14 +29,16 @@ class FooterFragment : Fragment() {
     lateinit var recycleViewFooter: RecyclerView
     val url =
         "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCxrxwFTBU3DTJ9Y5TKeW7KA&maxResults=6&key=AIzaSyCSMatZ9pufDtGa6mULtmfEZG-b30MKy88"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view=inflater.inflate(R.layout.fragment_footer,container,false)
+        val view = inflater.inflate(R.layout.fragment_footer, container, false)
         recycleViewFooter = view?.findViewById<View>(R.id.recycleViewFooter) as RecyclerView
         recyclerViewAdapterFooter = context?.let { RecyclerviewItemAdapterFooter(listFooter, it) }!!
         val layoutManagerFooter: RecyclerView.LayoutManager = GridLayoutManager(context, 3)
@@ -45,6 +47,7 @@ class FooterFragment : Fragment() {
         fetchData(recyclerViewAdapterFooter, url, listFooter)
         return view
     }
+
     @SuppressLint("NotifyDataSetChanged", "SuspiciousIndentation")
     fun fetchData(
         recyclerviewItemAdapterFooter: RecyclerviewItemAdapterFooter,
@@ -82,7 +85,11 @@ class FooterFragment : Fragment() {
                 }
             },
             { error ->
-                Toast.makeText(requireActivity().applicationContext, error.message, Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    requireActivity().applicationContext,
+                    error.message,
+                    Toast.LENGTH_SHORT
+                ).show()
 
             })
         requestQueue.add(stringRequest)
