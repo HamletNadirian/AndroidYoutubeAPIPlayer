@@ -28,7 +28,7 @@ class FooterFragment : Fragment() {
     private lateinit var recyclerViewAdapterFooter: RecyclerviewItemAdapterFooter
     lateinit var recycleViewFooter: RecyclerView
     val url =
-        "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCxrxwFTBU3DTJ9Y5TKeW7KA&maxResults=6&key=AIzaSyCSMatZ9pufDtGa6mULtmfEZG-b30MKy88"
+        "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UCxrxwFTBU3DTJ9Y5TKeW7KA&maxResults=6&key=YOUR_KEY"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
